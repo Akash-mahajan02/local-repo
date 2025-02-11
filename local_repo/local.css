@@ -1,0 +1,20 @@
+div{
+    background: rgb(4,170,109);
+    padding: 10px;
+}
+div.first{
+    background: rgb(4,170,109,0.1);
+    padding: 10px;
+}
+div.second{
+    background: rgb(4,170,109,0.3);
+    padding: 10px;
+}
+div.third{
+    background: rgb(4,170,109,0.6);
+    padding: 10px;
+}
+div.four{
+    background: rgb(4,170,109,0.7);
+    padding: 10px;
+}

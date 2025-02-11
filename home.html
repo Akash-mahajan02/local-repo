@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Coding</title>
+    <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href="website.html">AK Coding</a>
+            </div>
+            <nav>
+                <ul id="menuitems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><button class="Loginbtn" onclick="document.getElementById
+                    ('login-form').style.display='block'"style="width:auto;">Login</button></li> 
+                </ul>
+            </nav>
+                <!--navigation bar is finished lets run and see-->
+        </div>
+        <div id="login-form"class="login-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>    
+                    <button type="button" onclick='left_login()'class="toggle-btn">Log In</button>
+                    <button type="button" onclick='Right_Register()'class="toggle-btn">Register</button>    
+                </div>
+                <form id="login" class="input-group-login">
+                    <input type="text" class="input-field" placeholder="Email ID" required>
+                    <input type="password" class="input-field" placeholder="Enter password"required>
+                    <input type="checkbox" class="checkbox"><span>Remember me</span>
+                    <a href="#"class="A">Forget Password?</a>
+                    <button type="submit" class="submit">Log In</button>
+                </form>
+                <form id="register" class="input-group-register" action="regi_connect.php" method="post">
+                    <input type="text" class="input-field" placeholder="First Name" required name="FirstName">
+                    <input type="text" class="input-field" placeholder="Last Name"required name="LastName">
+                    <input type="email" class="input-field"placeholder="Email Id" required name="EmailID">
+                    <input type="password" class="input-field" placeholder="Enter password"required name="Pass">
+                    <input type="password" class="input-field"placeholder="Confirm password" required name="Con_pass">
+                    <input type="checkbox" class="checkbox"><span>I agree the terms and conditions</span>
+                    <button type="submit" class="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementsById('btn');
+
+        function left_login() {
+            x.style.left='56px';
+            y.style.left='456px';
+            z.style.left='0px';
+        }
+        function Right_Register() {
+            x.style.left='-400px';
+            y.style.left='56px';
+            z.style.left='110px';
+        }   
+    </script>
+    <!--this code is for the when you click out the login 
+        or registration page the form -box disappeares-->
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event)
+        {
+            if(event.target == modal)
+            {
+                modal.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>
