@@ -1,11 +1,5 @@
-div{
-    height: 100px;
-    width: 100px;
-    color: whitesmoke;
-    position: fixed;
-    right: 0px;
-    top: 25px;
-    background-image: url("cg.jpg.jpg");
-    background-size: cover;
+*{
+    margin: 0;
+    padding: 0;
 }
 
